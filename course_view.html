@@ -4,6 +4,19 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-witdth, initial-scale=1.0">
         <title>Course View - LMS</title>
+        <style>
+            .container{
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: auto auto auto;
+                padding: 10px;
+            }
+            .container > div {
+                border: 1px  black;
+                padding: 20px;
+            }
+            .img{width: 400px;max-height: 350px;}
+        </style>
     </head>
     <body>
         <header>
@@ -16,21 +29,75 @@
         </div>
         <br>
         <main>
-            <form>
+            <div>
+                <label for="term">Select Term: </label>
+                <select name="term" id="term">
+                    <option value="Winter 2025">Winter 2025</option>
+                    <option value="Fall 2024">Fall 2024</option>
+                    <option value="Summer 2024">Summer 2024</option>
+                    <option value="Spring 2024">Spring 2024</option>
+                </select>
+            </div>
+            <div>
+                <br>
+                <h2>Enrolled Courses</h2>
+                <hr>
+            </div>
+            <div class="container">
                 <div>
-                    <label for="term">Select Term: </label>
-                    <select name="term" id="term">
-                        <option value="Spring 2024">Spring 2024</option>
-                        <option value="Summer 2024">Summer 2024</option>
-                        <option value="Fall 2024">Fall 2024</option>
-                        <option value="Winter 2025" selected="true">Winter 2025</option>
-                    </select>
+                    <img src="course1.jpg" alt="Web Development" class="img">
+                    <p>Course Name: Web Development</p>
+                    <p>Course Code: WD381</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
                 </div>
                 <div>
-                    <h2>Enrolled Courses</h2>
-                    <hr>
+                    <img src="course1.jpg" alt="Data Structures" class="img">
+                    <p>Course Name: Data Structures</p>
+                    <p>Course Code: DS371</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
                 </div>
-            </form>
+                <div>
+                    <img src="course1.jpg" alt="DBMS" class="img">
+                    <p>Course Name: DBMS</p>
+                    <p>Course Code: DB346</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
+                </div>
+                <div style="margin: 5px;">
+                    <img src="course1.jpg" alt="Web Development" class="img">
+                    <p>Course Name: Software Testing</p>
+                    <p>Course Code: ST484</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
+                </div>
+                <div style="margin: 5px;">
+                    <img src="course1.jpg" alt="Data Structures" class="img">
+                    <p>Course Name: Software Architectures</p>
+                    <p>Course Code: SA396</p>
+                    <a href="attempt_quiz.html">Attempt Quiz</a>
+                </div>
+            </div>
+
+            <div>
+                <br>
+                <h2>Pending Invitations</h2>
+                <hr>
+            </div>
+
+            <div class="container">
+                <div>
+                    <img src="course2.jpg" alt="Data Scienece" class="img">
+                    <p >Course Name: Data Science</p>
+                    <p>Course Code: DS102</p>
+                    <button style="background: green; color: white;">Accept</button>
+                    <button style="background: red; color: white;">Decline</button>
+                </div>
+                <div>
+                    <img src="course2.jpg" alt="Machine Learning" class="img">
+                    <p>Course Name: Machine Learning</p>
+                    <p>Course Code: ML105</p>
+                    <button style="background: green; color: white;">Accept</button>
+                    <button style="background: red; color: white;">Decline</button>
+                </div>
+            </div> 
         </main>
         <footer>
             © 2025 LMS. All rights reserved.
